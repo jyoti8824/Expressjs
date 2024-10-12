@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Dog Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    .description {
+      color: #34495e;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+    input[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Street Dog Registration</h1>
+    <p class="description">Help us keep track of our furry friends! Register a street dog you've seen in your neighborhood.</p>
+    <form action="/submit" method="POST">
+      <label for="street">Street Name:</label>
+      <input type="text" id="street" name="street" required placeholder="e.g., Rani Sati">
+      
+      <label for="pet">Dog Color:</label>
+      <input type="text" id="pet" name="pet" required placeholder="e.g., Brown and White">
+      
+      <label for="nickname">Nickname (if any):</label>
+      <input type="text" id="nickname" name="nickname" placeholder="e.g., Chamkila">
+      
+      <label for="lastSeen">Last Seen Date:</label>
+      <input type="text" id="lastSeen" name="lastSeenDate" placeholder="e.g., 2024-08-15">
+      
+      <input type="submit" value="Register Dog">
+    </form>
+    <p class="footer">Thank you for helping us care for street dogs in our community!</p>
+  </div>
+</body>
+
+</html>
